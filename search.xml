@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[git子模块submodule]]></title>
+    <url>%2F2019%2F05%2F22%2Fgitsubmodule%2F</url>
+    <content type="text"><![CDATA[背景在git仓库中有时会用到第三方的git库，希望自己的仓库和第三方库能独立。这个时候可以使用git子模块submodule来管理第三方库。 添加子模块将第三方git仓库以子模块的方式clone到本地目录：1git submodule add source.git dest_dir 添加子模块后，在目录下会生成一个.gitsubmodules文件，用于保存添加的子模块信息。 查看子模块1git submodule 如果子模块前面有一个-，表示还没有将子项目clone到本地，是一个空目录。 更新子模块 更新子模块到最新版本 1git submodule update 更新子模块为远程项目的最新版本 1git submodule update --remote clone包含子模块的项目clone包含有子模块的项目，有2中方法，一种是先clone父项目，在更新子模块，第二种是递归clone项目 方法1123git clone source.gitgit submodule initgit submodule update 方法21git clone --recursive source.git 删除子模块删除子模块没有相应的命令，需要几步操作。 删除子模块的目录 12git rm --cached dest_dirrm -fr dest_dir 删除.gitsubmodules中的子模块信息 删除.git/config中子模块信息 删除.git文件夹中子模块文件夹1rm -fr .git/modules/dest_dir 问题 添加子模块时出现already exists in the index错误12rm -fr dest_dirgit rm --cached dest_dir]]></content>
+      <categories>
+        <category>git</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>submodule</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[立个flag]]></title>
+    <url>%2F2019%2F04%2F25%2Fstart%2F</url>
+    <content type="text"><![CDATA[终于弄了个blog，用于记录自己平时在工作或生活上的一些想法或积累，培养善于总结的习惯，希望能坚持下去。]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+  </entry>
+</search>
